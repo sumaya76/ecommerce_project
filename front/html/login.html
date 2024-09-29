@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verito Demo &#8211; Just another WordPress MagikThemes Sites site</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Markup for Header-->
+<header>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <p>Default welcome msg!</p>
+        </div>
+        <div class="col-sm-6 offset-sm-3">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-user"></i>
+                My Account
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-circle-info"></i>
+                Track Order
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-circle-check"></i>
+                Checkout
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-heart"></i>
+                Wishlist
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-lock"></i>
+                Login
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sign-up.html">
+                <i class="fa-solid fa-pen"></i>
+                Register
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="middle-part">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="logo">
+            <a class="navbar-brand" href="#">
+              <img src="img/logo.png" alt="Logo Icon" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-8 offset-sm-2">
+          <ul class="nav ms-5">
+            <li class="nav-item">
+              <a class="nav-link about-us" href="#"> About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link about-us" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link about-us" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link about-us me-4" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Search for Products" aria-label="Search for Products" aria-describedby="basic-addon">
+                  <span class="input-group-text" id="basic-addon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                </div>
+
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <button type="button" class="btn btn-danger">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span class="price">Cart / <span class="price_code">&dollar;</span>0.00</span>
+                </button>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Living Room</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Dining & Bar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Bedroom</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kitchen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+<section class="logIn">
+  <div class="container">
+    <h4 class="text-center mt-5 mb-4">Login</h4>
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3">
+        <form method="post" action="#">
+          <div class="mb-3 row">
+            <label for="inputUserName" class="col-sm-2 col-form-label">User Name</label>
+            <div class="col-sm-10">
+              <input
+                      type="text"
+                      class="form-control"
+                      id="inputUserName"
+                      name="user-name"
+                      value=""
+                      placeholder="Write your User Name">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input
+                      type="password"
+                      class="form-control"
+                      id="inputPassword"
+                      name="password"
+                      value="" placeholder="Write your password">
+            </div>
+          </div>
+          <div class="mb-5 row mt-4">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+          </div>
+
+
+
+        </form>
+
+
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="text-center">&copy; 2016 Magikcommerce. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const myCarouselElement = document.querySelector('#myCarousel')
+
+  const carousel = new bootstrap.Carousel(myCarouselElement, {
+    interval: 1800,
+    touch: true
+  })
+
+</script>
+</body>
+</html>

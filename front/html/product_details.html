@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product_details</title>
+  
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+  <!-- xzoom plugin here -->
+  <script type="text/javascript" src="dist/xzoom.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="dist/xzoom.css" media="all" /> 
+  <!-- hammer plugin here -->
+
+ 
+ 
+  
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Markup for Header-->
+<header>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <p>Default welcome msg!</p>
+        </div>
+        <div class="col-sm-6 offset-sm-3">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-user"></i>
+                My Account
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-circle-info"></i>
+                Track Order
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-circle-check"></i>
+                Checkout
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-heart"></i>
+                Wishlist
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">
+                <i class="fa-solid fa-lock"></i>
+                Login
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sign-up.html">
+                <i class="fa-solid fa-pen"></i>
+                Register
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="middle-part">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="logo">
+            <a class="navbar-brand" href="#">
+              <img src="img/logo.png" alt="Logo Icon" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-8 offset-sm-2">
+          <ul class="nav ms-5">
+            <li class="nav-item">
+              <a class="nav-link about-us" href="#"> About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link about-us" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link about-us" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link about-us me-4" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Search for Products" aria-label="Search for Products" aria-describedby="basic-addon">
+                  <span class="input-group-text" id="basic-addon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                </div>
+
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <button type="button" class="btn btn-danger">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span class="price">Cart / <span class="price_code">&dollar;</span>0.00</span>
+                </button>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Living Room</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Dining & Bar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Bedroom</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kitchen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+<div class="product-breadcrumb mt-4">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="product.html">Product</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Modern Adjustable Dressing Table</li>
+      </ol>
+    </nav>
+  </div>
+
+</div>
+<section class="product_details mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="xzoom-container">
+          <img class="xzoom" id="xzoom-default" src="img/gallery/preview/cart1_b.jpg" xoriginal="img/gallery/original/1.jpg" />
+          <div class="xzoom-thumbs">
+            <a href="img/gallery/original/1.jpg"><img class="xzoom-gallery" width="80" src="img/gallery/thumbs/cart1_c (1).jpg"xpreview="img/gallery/preview/cart1_b.jpg" title="The description goes here"></a>
+            <a href="img/gallery/original/2.jpg"><img class="xzoom-gallery" width="80" src="img/gallery/preview/cart2_b.jpg" title="The description goes here"></a>
+            <a href="img/gallery/original/3.jpg"><img class="xzoom-gallery" width="80" src="img/gallery/preview/cart3_b.jpg" title="The description goes here"></a>
+            <a href="img/gallery/original/4.jpg"><img class="xzoom-gallery" width="80" src="img/gallery/preview/cart4_b.jpg" title="The description goes here"></a>
+          </div>
+        </div>   
+      </div>
+      <div class="col-sm-7">
+        <div class="product_name">
+     <h1 class="product_title entry_title text-uppercase">Modern Adjustable Dressing Table</h1>
+        </div>
+        <div>
+          <p class="rating mt-2">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </p>
+          <p class="price mt-5">&dollar;20.00</p>
+        </div>
+        <div class="short-description">
+          <h2>Quick Overview</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat autem ipsum aperiam atque commodi, beatae sunt nihil eius minima dolorem sint reiciendis, quis recusandae placeat, dolores ex. Eum, cum officia.</p>
+
+        </div>
+<button type="button" class = "btn btn-danger">
+  <i class="fa-solid fa-cart-sopping"></i>
+  Add to cart
+</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Markup for Banner-->
+
+<!--Markup for Best Sellers-->
+
+
+
+
+
+
+<footer>
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="text-center">&copy; 2016 Magikcommerce. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/foundation.min.js"></script>
+    <script src="js/setup.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<section>
+<div class="container-fluid">
+	<div class="row">
+		<aside class="col-md-2" id="sidebar">
+			<ul class="sidebar-menu">
+      
+        
+				<li>
+					<a href="" class="active"> <i class="fa fa-dashboard"></i> Welcome</a>
+				</li>
+        <li>
+					<a href="product.php" class="active"> <i class="fas fa-home"></i> Dashboard</a>
+				</li>
+        <li>
+					<a href="<?=$webroot?>admin/banners/index.php" class="active"> <i class="fa fa-shopping-bag"></i> Banner</a>
+				</li>
+        <li>
+					<a href="" class="active"> <i class="fas fa-box-open"></i> Product</a>
+				</li>
+       
+        
+				
+				
+        <li>
+					<a href="" class="active"> <i class="fas fa-shopping-cart"></i>Order</a>
+				</li>
+         <li>
+					<a href="" class="active"><i class="fas fa-users"></i> Users </a>
+				</li>
+        
+				<li>
+					<a href="" class="active"><i class="fas fa-envelope"></i> Messages </a>
+				</li>
+        
+				<li>
+					<a href="" class="active"><i class="fas f"></i> Logout</a>
+				</li>
+        
+				 
+			</ul>
+		</aside>
+
+		<main class="col-md-10" id="main">
+			<section class="spacethis">
+				<h3 class="title">Overview</h3>
+				<div class="row mobile-scrollable">
+					<div class=" col-md-3">
+						<div class="bg-secondary-subtle dash-card">
+							<i class="fa-solid fa-cart-shopping"></i>
+							<p>Products</p>
+							<h1 class="text-success">500</h1>
+							<button type="button" class="btn btn-theme">Know More</button>
+
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="bg-success-subtle dash-card">
+							<i class="fa-solid fa-user-group" aria-hidden="true"></i>
+							<p>Customers</p>
+							<h1 class="text-danger">500</h1>
+							<button type="button" class="btn btn-theme">Know More</button>
+
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class=" dash-card">
+							<i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
+							<p>Ongoing Orders</p>
+							<h1 class="text-warning">500</h1>
+							<button type="button" class="btn btn-theme">Know More</button>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="bg-warning-subtle dash-card">
+							<i class="fa-solid fa-store" aria-hidden="true"></i>
+							<p>Sellers</p>
+							<h1 class="text-success">500</h1>
+							<button type="button" class="btn btn-theme">Know More</button>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+		
+
+		
+		</main>
+	</div>
+</div>
+
+</section>

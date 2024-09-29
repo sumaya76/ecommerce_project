@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQs</title>
+  <style>
+  
+
+
+
+
+ul {
+  list-style: none;
+}
+
+input {
+  overflow: hidden;
+}
+
+.section-title {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 35px;
+}
+
+.sec-pad {
+  padding: 60px 0 0;
+  margin: 50px 0;
+}
+
+.contact-sec {
+  align-item: center;
+  display: flex;
+  background-color: white;
+}
+
+.contact-sec .contact-ul li,
+.contact-ul b {
+  font-size: 20px;
+  margin: 10px 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  word-wrap: break-word;
+}
+
+.contact-sec .contact-ul i {
+  font-size: 18px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.contact-detail a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-sec .contact-ul li b:hover {
+  color: #f93;
+}
+
+.contact-sec .contact-ul li .fa-location-dot {
+  color: #f44337;
+  border: 2px solid #f4433790;
+}
+
+.contact-sec .contact-ul li .fa-phone {
+  color: #00b055;
+  border: 2px solid #00b05590;
+}
+
+.contact-sec .contact-ul li .fa-envelope {
+  color: #ff6347;
+  border: 2px solid #ff634790;
+}
+
+.contact-detail span {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+.contact-detail span a {
+  font-size: 20px;
+  padding: 6px 12px;
+  color: #000;
+  border-radius: 50%;
+  margin: 0px 5px;
+}
+.contact-detail span .fb {
+  color: #3b5998;
+  border: 3px solid #3b5998;
+}
+.contact-detail span .fb:hover {
+  color: #fff;
+  background-color: #3b5998;
+}
+
+.contact-detail span .insta {
+  color: #833ab4;
+  border: 3px solid #833ab4;
+}
+.contact-detail span .insta:hover {
+  color: #fff;
+  background-color: #833ab4;
+}
+
+.contact-detail span .twitter {
+  color: #00acee;
+  border: 3px solid #00acee;
+}
+.contact-detail span .twitter:hover {
+  color: #fff;
+  background-color: #00acee;
+}
+
+form.contFrm {
+  max-width: 396px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+  </style>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Markup for Header-->
+<header>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <p>Default welcome msg!</p>
+        </div>
+        <div class="col-sm-6 offset-sm-3">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-user"></i>
+                My Account
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-circle-info"></i>
+                Track Order
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-circle-check"></i>
+                Checkout
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-heart"></i>
+                Wishlist
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-lock"></i>
+                Login
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sign-up.html">
+                <i class="fa-solid fa-pen"></i>
+                Register
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="middle-part">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="logo">
+            <a class="navbar-brand" href="#">
+              <img src="img/logo.png" alt="Logo Icon" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-8 offset-sm-2">
+          <ul class="nav ms-5">
+            <li class="nav-item">
+              <a class="nav-link about-us" href="#"> About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link about-us" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link about-us" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link about-us me-4" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Search for Products" aria-label="Search for Products" aria-describedby="basic-addon">
+                  <span class="input-group-text" id="basic-addon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                </div>
+
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <button type="button" class="btn btn-danger">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span class="price">Cart / <span class="price_code">&dollar;</span>0.00</span>
+                </button>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Living Room</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Dining & Bar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Bedroom</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kitchen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+<div class="product-breadcrumb mt-4">
+  <div class="container">
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+          </ol>
+      </nav>
+  </div>
+
+</div>
+
+
+<section class="contact-sec sec-pad">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-detail">
+          <h1 class="section-title">Contact us</h1>
+       
+          <ul class="contact-ul">
+            <li><i class="fa fa-location-dot"></i> Uttara Sector 10 , Dhaka 1230</li>
+
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="tel:01677702636"><b>01677702636</b></a>,
+              <a href="tel:01610005495"><b>01610005495</b></a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="#"><b>furniFrenzy@gmail.com</b></a>
+            </li>
+          </ul>
+
+          <span>
+            <a href="#" class="fb"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+          </span>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <form action="#" class="contFrm" method="POST">
+          <div class="row">
+            <div class="col-sm-6">
+              <img src="img/maplocation (2).png " alt="Image description" class="img-responsive">
+            </div>
+          </div>
+        </form>
+      </div>
+          
+          
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+      
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="Footer  bg-dark mt-0">
+  <div class="container text-white bg-dark p-4">
+    <div class="row">
+      <div class="col-6 col-md-8 col-lg-7">
+        <div class="row text-center">
+          <div class="col-sm-6 col-md-4 col-lg-4 col-12">
+            <ul class="list-unstyled mt-5">
+              <h6>My Account</h6>
+              <li class="btn-link"> <a href="login.php">Login</a></li>
+              <li class="btn-link"> <a href="aboutus.php">About us</a></li>
+              <li class="btn-link"> <a href="#">Wishlist</a></li>
+              <li class="btn-link"> <a href="#">Checkout</a></li>
+              <li class="btn-link"> <a href="#">FAQs</a></li>
+              <li class="btn-link"> <a href="#">Contact Us</a></li>
+            </ul>
+          
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4 col-12">
+            <ul class="list-unstyled mt-5">
+              <h6> STYLE ADVISOR</h6>
+              <li class="btn-link "> <a href="signUp.php">Your Account</a></li>
+              <li class="btn-link"> <a href="#">Information</a></li>
+              <li class="btn-link"> <a href="#">Addresses</a></li>
+              <li class="btn-link"> <a href="bottom-banner.png">Discount</a></li>
+              <li class="btn-link"> <a href="">Orders History</a></li>
+              <li class="btn-link"> <a href="#">Additional Information</a></li>
+            </ul>
+           
+
+
+
+
+
+
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4 col-12">
+            <ul class="list-unstyled mt-5">
+            <h6> INFORMATION</h6>
+              <li class="btn-link "> <a href="#">Site Map</a></li>
+              <li class="btn-link"> <a href="#">Search Terms</a></li>
+              <li class="btn-link"> <a href="#">Advanced Search</a></li>
+              <li class="btn-link"> <a href="#">Privacy Policy</a></li>
+              <li class="btn-link"> <a href="#">Suppliers</a></li>
+              <li class="btn-link"> <a href="#">Our stores</a></li>
+            </ul>
+            
+         
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-6 mt-5">
+        <form action="subscribe.php" method="post">
+          <h6 class="subscribe">Sign up for Email:</h6>
+          <input type="email" name="email" placeholder="Enter your email" required>
+         
+      </div>
+    </div>
+    <div class="row text-center mt-5">
+      <div class="col-lg-12">
+          <div class="footer__copyright">
+              <div class="footer__copyright__text">
+                  <p>
+                      Copyright &copy;
+                      <script>document.write(new Date().getFullYear());</script> All rights reserved <i
+                          class="fa fa-heart" aria-hidden="true"></i> by FurniFrenzy
+                  <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  
+
+</section>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const myCarouselElement = document.querySelector('#myCarousel')
+
+  const carousel = new bootstrap.Carousel(myCarouselElement, {
+    interval: 1800,
+    touch: true
+  })
+
+</script>
+</body>
+</html>

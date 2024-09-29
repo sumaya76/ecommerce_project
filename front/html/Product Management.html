@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Product Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Product Management</h1>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#inventory">Inventory</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="dashboard">
+                <h2>Dashboard</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <h3>Total Products</h3>
+                        <p id="total-products">0</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Categories</h3>
+                        <p id="total-categories">0</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Out of Stock</h3>
+                        <p id="out-of-stock">0</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="products">
+                <h2>Products</h2>
+                <button onclick="showAddProductForm()">Add New Product</button>
+                <div id="product-form" style="display: none;">
+                    <input type="hidden" id="product-id">
+                    <input type="text" id="product-name" placeholder="Product Name">
+                    <input type="number" id="product-price" placeholder="Product Price">
+                    <input type="number" id="product-stock" placeholder="Product Stock">
+                    <button onclick="saveProduct()">Save Product</button>
+                    <button onclick="hideProductForm()">Cancel</button>
+                </div>
+                <div class="product-list" id="product-list">
+                    <!-- Dynamic product list goes here -->
+                </div>
+            </section>
+            
+            <section id="categories">
+                <h2>Categories</h2>
+                <button onclick="addCategory()">Add New Category</button>
+                <div class="category-list">
+                    <!-- Dynamic category list goes here -->
+                </div>
+            </section>
+            
+            <section id="inventory">
+                <h2>Inventory</h2>
+                <div class="inventory-list">
+                    <!-- Dynamic inventory list goes here -->
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Admin Product Management</p>
+        </footer>
+    </div>
+    
+    <script>
+        const apiUrl = 'http://localhost:3000/products';
+
+        async function fetchProducts() {
+            const response = await fetch(apiUrl);
+            const products = await response.json();
+            const productList = document.getElementById('product-list');
+            productList.innerHTML = '';
+            products.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.innerHTML = `
+                    <strong>${product.name}</strong>
+                    <p>Price: $${product.price}</p>
+                    <p>Stock: ${product.stock}</p>
+                    <button onclick="editProduct(${product.id})">Edit</button>
+                    <button onclick="deleteProduct(${product.id})">Delete</button>
+                `;
+                productList.appendChild(productElement);
+            });
+            document.getElementById('total-products').innerText = products.length;
+        }
+
+        async function saveProduct() {
+            const id = document.getElementById('product-id').value;
+            const name = document.getElementById('product-name').value;
+            const price = document.getElementById('product-price').value;
+            const stock = document.getElementById('product-stock').value;
+
+            const product = { name, price, stock };
+
+            let response;
+            if (id) {
+                response = await fetch(`${apiUrl}/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(product),
+                });
+            } else {
+                response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(product),
+                });
+            }
+            await response.json();
+            hideProductForm();
+            fetchProducts();
+        }
+
+        async function deleteProduct(id) {
+            await fetch(`${apiUrl}/${id}`, {
+                method: 'DELETE',
+            });
+            fetchProducts();
+        }
+
+        function editProduct(id) {
+            const product = products.find(p => p.id === id);
+            document.getElementById('product-id').value = product.id;
+            document.getElementById('product-name').value = product.name;
+            document.getElementById('product-price').value = product.price;
+            document.getElementById('product-stock').value = product.stock;
+            showAddProductForm();
+        }
+
+        function showAddProductForm() {
+            document.getElementById('product-form').style.display = 'block';
+        }
+
+        function hideProductForm() {
+            document.getElementById('product-id').value = '';
+            document.getElementById('product-name').value = '';
+            document.getElementById('product-price').value = '';
+            document.getElementById('product-stock').value = '';
+            document.getElementById('product-form').style.display = 'none';
+        }
+
+        window.onload = fetchProducts;
+    </script>
+</body>
+</html>
